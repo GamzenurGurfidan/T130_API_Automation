@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class C2_Get_ResponseBilgileriAssertion {
+public class C02_Get_ResponseBilgileriAssertion {
 
     /*
        https://restful-booker.herokuapp.com/booking/10 url'ine bir GET request

@@ -1,13 +1,12 @@
 package tests;
 
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class C5_Get_ResponseBodyTesti {
+public class C05_Get_ResponseBodyTesti {
     /*
         https://jsonplaceholder.typicode.com/posts/44 url'ine bir GET request yolladigimizda
         donen Response'in
