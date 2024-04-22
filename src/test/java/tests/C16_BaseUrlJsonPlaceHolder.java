@@ -3,7 +3,7 @@ package tests;
 import baseURL.BaseURLJsonPlaceHolder;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 

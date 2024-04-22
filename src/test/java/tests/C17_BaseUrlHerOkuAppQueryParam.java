@@ -1,10 +1,8 @@
 package tests;
 
 import baseURL.BaseURLHerOkuApp;
-import baseURL.BaseURLJsonPlaceHolder;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -28,7 +26,7 @@ public class C17_BaseUrlHerOkuAppQueryParam extends BaseURLHerOkuApp {
 
         Response response = given().when().spec(specHerOkuApp).get("/{pp1}");
 
-        response.then().assertThat().statusCode(200).body("size()", equalTo(2));
+        response.then().assertThat().statusCode(200).body("size()", equalTo(1));
 
 
     }

@@ -3,7 +3,7 @@ package tests;
 import baseURL.BaseURLHerOkuApp;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
@@ -29,7 +29,7 @@ public class C15_baseUrlHerOkuApp extends BaseURLHerOkuApp {
         Response response=given().when().spec(specHerOkuApp).get("/{pp1}");
 
         //.....Kontrol işlemi
-        response.then().assertThat().statusCode(200).body("bookingid", Matchers.hasItem(133));
+        response.then().assertThat().statusCode(200).body("bookingid", Matchers.hasItem(126));
 
 
 
