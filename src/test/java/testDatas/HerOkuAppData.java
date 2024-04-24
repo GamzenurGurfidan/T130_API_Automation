@@ -3,6 +3,9 @@ package testDatas;
 import io.restassured.path.json.JsonPath;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class HerOkuAppData {
     /*
             https://restful-booker.herokuapp.com/booking url'ine
@@ -65,4 +68,61 @@ public class HerOkuAppData {
 
         return expData;
     }
+
+    /*
+        Request body
+           {
+            "firstname" : "Ahmet",
+            "lastname" : "Bulut",
+            "totalprice" : 500,
+            "depositpaid" : false,
+            "bookingdates" : {
+                     "checkin" : "2021-06-01",
+                     "checkout" : "2021-06-10"
+                                          },
+            "additionalneeds" : "wi-fi"
+             }
+
+        Response Body // expected data
+             {
+              "bookingid":24,
+              "booking":{
+                    "firstname":"Ahmet",
+                    "lastname":"Bulut",
+                    "totalprice":500,
+                    "depositpaid":false,
+                    "bookingdates":{
+                          "checkin":"2021-06-01",
+                          "checkout":"2021-06-10",
+                     "additionalneeds":"wi-fi"
+                    }
+     */
+
+    public static Map<String,Object> mapReqBodyOlustur(){
+        Map<String,Object> reqData = new HashMap<>();
+        Map<String,Object> bookingDates = new HashMap<>();
+
+        bookingDates.put("checkin", "2021-06-01");
+        bookingDates.put("checkout", "2021-06-10");
+
+        reqData.put("firstname","Ahmet");
+        reqData.put("lastname","Buloot");
+        reqData.put("totalprice",500.0);
+        reqData.put("depositpaid",false);
+        reqData.put("bookingdates", bookingDates);
+        reqData.put("additionalneeds","wi-fi");
+
+        return reqData;
+    }
+
+    public static Map<String,Object> mapExpBoyOlustur(){
+
+        Map<String,Object> expBodyMap = new HashMap<>();
+
+        expBodyMap.put("bookingid",24);
+        expBodyMap.put("booking",mapReqBodyOlustur());
+
+    return  expBodyMap;
+    }
+
 }
