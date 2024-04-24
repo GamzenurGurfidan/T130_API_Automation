@@ -2,6 +2,9 @@ package testDatas;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class JsonPlaceData {
     /*
        https://jsonplaceholder.typicode.com/posts/22 url'ine
@@ -49,4 +52,17 @@ public class JsonPlaceData {
 
         return expData;
     }
+
+    public static Map<String,Object> mapBodyOlustur(){
+
+        Map<String,Object> mapBody = new HashMap<>();
+        mapBody.put("title", "Ahmet");
+        mapBody.put("body","Merhaba");
+        mapBody.put("userId",10.0);
+        mapBody.put("id",70.0);
+
+        return mapBody;
+    }
+
+
 }
