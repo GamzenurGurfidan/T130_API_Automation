@@ -8,14 +8,6 @@ public class PojoHerOkuAppBookingDates {
     private String checkin;
     private String checkout;
 
-    public String getCheckin() {
-        return checkin;
-    }
-
-    public void setCheckin(String checkin) {
-        this.checkin = checkin;
-    }
-
     public String getCheckout() {
         return checkout;
     }
@@ -24,6 +16,13 @@ public class PojoHerOkuAppBookingDates {
         this.checkout = checkout;
     }
 
+    public String getCheckin() {
+        return checkin;
+    }
+
+    public void setCheckin(String checkin) {
+        this.checkin = checkin;
+    }
 
     public PojoHerOkuAppBookingDates(String checkin, String checkout) {
         this.checkin = checkin;
@@ -35,7 +34,7 @@ public class PojoHerOkuAppBookingDates {
 
     @Override
     public String toString() {
-        return "PojoHerOkuAppBookingdates{" +
+        return "PojoHerOkuAppBookingDates{" +
                 "checkin='" + checkin + '\'' +
                 ", checkout='" + checkout + '\'' +
                 '}';
